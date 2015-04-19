@@ -3,7 +3,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0 5px 5px 10px;
-	width: 300px;
+	width: 500px;
 	height: auto;
 	background-color: #33cc33;
 	border: 3px solid #000000;
@@ -22,7 +22,38 @@ h2 {
 	width: 150px;
 	font-size: 18px;
 }
+#attack {
+	height: 40px;
+	width: 150px;
+	font-size: 18px;
+}
 
-#displayCreature {
+#attackResults {
 	text-align: center;
+}
+
+h4 {
+	display: inline;
+	font-size: 12px;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+#dungeonPic {
+	display: block;
+	float: right;
+	margin: 5% 5% 0 5%;
+	height: 400px;
+	width: 420px;
+}
+
+#dungeonPic2 {
+	display: inline;
+	float: left;
+	margin: 5% 5% 0 5%;
+	height: 400px;
+	width: 400px;
+}
+
+.body {
+	background-color: black;
 }

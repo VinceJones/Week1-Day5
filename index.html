@@ -9,34 +9,41 @@
 		<link href="styles.css" rel="stylesheet">
 	</head>
 
-	<body>
+	<body class="body">
 
-		<div id="addMonster">
-		<h2>Character or Monster Stats</h2>
+		<img src="dungeonPic.png" id="dungeonPic"/>
+		<img src="dungeonPic2.png" id="dungeonPic2"/>
+
+	  <div id="addMonster">
+		<h2>Character and Monster Stats</h2>
+		<p>This app will create one monster and one player, choose one set of stats and a D20 will be rolled for each to determine who will win in a fight.</p>
 		<table>
 			<tr>
 				<td><label id="creatureClass">Class</label></td>
-  				<td><p>
+  				<td>
   					<p>Select one class for character development</p>
-  					<input type="checkbox" id="creatureClass" value="none" checked="checked"/>None
-  					<input type="checkbox" id="creatureClass" value="cleric"/>Cleric<br>
-  					<input type="checkbox" id="creatureClass" value="fighter"/>Fighter
-  					<input type="checkbox" id="creatureClass" value="rogue"/>Rogue<br>
-  					<input type="checkbox" id="creatureClass" value="wizard"/>Wizard
-  					<p>Select Monster for monster development</p>
-  					<input type="checkbox" id="creatureClass" value="monster"/>Monster
-  				</td></p>
+  					<form id="classButton" action="form_action.asp">
+  						<input type="radio" name="classType" id="1" value="None"/>None
+  						<input type="radio" name="classType" id="2" value="Cleric"/>Cleric<br>
+  						<input type="radio" name="classType" id="3" value="Fighter"/>Fighter
+  						<input type="radio" name="classType" id="4" value="Rogue"/>Rogue<br>
+  						<input type="radio" name="classType" id="5" value="Wizard"/>Wizard<br>
+  					</form>
+  					<p id="classError"></p>
+  				</td>
   			</tr>
 
   			<tr><td><br></td></tr>
-
+  			<div class="pMove">
   			<tr>
   		  		<td><label id="str">Strength</label></td>
   				<td>
   					<form id="strength" action="form_action.asp">
   						<input type="text" value="" size="5" maxlength="2">
+  						<h4 id="strStat"></h4>
   					</form>
   				</td>
+  				<td></td>
 			</tr>
 
 			<tr>
@@ -44,8 +51,10 @@
   				<td>
   					<form id="dexterity" action="form_action.asp">
   						<input type="text" value ="" size="5" maxlength="2">
+  						<h4 id="dexStat"></h4>
   					</form>
   				</td>
+  				<td></td>
   			</tr>
 
   			<tr>
@@ -53,8 +62,10 @@
   				<td>
   					<form id="constitution" action="form_action.asp">
   						<input type="text" value ="" size="5" maxlength="2"/>
+  						<h4 id="conStat"></h4>
   					</form>
   				</td>
+  				<td></td>
   			</tr>
 
   			<tr>
@@ -62,17 +73,21 @@
   				<td>
   					<form id="wisdom" action="form_action.asp">
   						<input type="text" value ="" size="5" maxlength="2"/>
+  						<h4 id="wisStat"></h4>
   					</form>
   				</td>
-  			<tr>
+  				<td></td>
+  			</tr>
 
   			<tr>
   		  		<td><label id="int">Intelligence</label></td>
   				<td>
   					<form id="intelligence" action="form_action.asp">
   						<input type="text" value ="" size="5" maxlength="2"/>
+  						<h4 id="intStat"></h4>
   					</form>
   				</td>
+  				<td></td>
   			</tr>
 
   		 	<tr>
@@ -80,20 +95,37 @@
   				<td>
   					<form id="charisma" action="form_action.asp">
   						<input type="text" value ="" size="5" maxlength="2"/>
+  						<h4 id="chaStat"></h4>
   					</form>
   				</td>
+  				<td></td>
   			</tr>
+  			</div>
 
   		  	<tr>
   		  		<td><label id="submit">Add Player or Monster to Records</label></td>
   				<td><input type="submit" id="submitMonster"/></td>
   		  	<tr>
 
-  		</table>
-  		</div>
-  		<p id="displayCreature"></p>
+  		  	<tr>
+  		  		<td></td>
+  		  		<td><p id="statResults"></p></td>
+  		  	</tr>
 
-  		<p id="characters"></p>
+  		  	<tr>
+  		  		<td><label id="submit">Click to have Player and Monster Attack!</label></td>
+  				<td><input type="submit" id="attack" value="Attack!"/></td>
+  			</tr>
+
+  			<tr>
+  				<td><p id="monsterAttackResults"></p></td>
+  				<td><p id="playerAttackResults"></p></td>
+  			</tr>
+  		</table>
+
+  		<h2 id="whoWon"></h2>
+  	  </div>
+
 
 		<script src="app.js"></script>
 	</body>
