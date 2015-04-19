@@ -7,6 +7,9 @@ var i;
 document.getElementById('submitMonster').addEventListener('click', makeCreature );
 document.getElementById('attack').addEventListener('click', creatureAttack );
 
+
+
+
 function makeCreature() {
 	people.push( new Monster("Monster") );
 	people.push( new Monster("Player") );
@@ -31,11 +34,7 @@ function makeCreature() {
 			document.getElementById('charisma').reset();
 			document.getElementById('chaStat').innerHTML = people[i].cha;
 	}
-
-
-
 	document.getElementById('statResults').innerHTML = "Stats Saved!";
-	
 }
 
 function Monster(name) {
@@ -50,7 +49,7 @@ function Monster(name) {
 		if (this.name == "Monster") { 
 			attackBonus = randomNumber(1, 20);
 
-			//document.getElementById('strStat').innerHTML = this.str + "+" + attackBonus;
+			document.getElementById('strStat').innerHTML = this.str + "+" + attackBonus;
 			
 			this.attBonus = attackBonus;
 			this.attackTotal = attackBonus + this.str;
@@ -60,7 +59,7 @@ function Monster(name) {
 			
 			attackBonus = randomNumber(1, 20);
 			
-			//document.getElementById('dexStat').innerHTML = this.dex + "+" + attackBonus;
+			document.getElementById('dexStat').innerHTML = this.dex + "+" + attackBonus;
 			
 			this.attBonus = attackBonus;
 			this.attackTotal = attackBonus + this.dex;
@@ -69,12 +68,12 @@ function Monster(name) {
 		}
 	}
 	this.stuff = function() {
-					var form = document.getElementById('classButton');
-					var playerClass = "";
-					var len = form.classType.length;
+		var form = document.getElementById('classButton');
+		var playerClass = "";
+		var len = form.classType.length;
 
-						if (form.classType[0].checked) {
-							document.getElementById('classError').innerHTML = form.classType[0].value;
+			if (form.classType[0].checked) {
+				document.getElementById('classError').innerHTML = form.classType[0].value;
 							playerClass = form.classType[0].value;
 							return playerClass;
 						} else if (form.classType[1].checked) {
@@ -104,7 +103,7 @@ function creatureAttack() {
 	for (i = 0; i < people.length-1; i++) {
 		var monsterAttack = people[i].attack();
 		var playerAttack = people[i+1].attack();
-		var playerClass = people[i].stuff();
+		var playerClass = people[i+1].stuff();
 		
 		document.getElementById("monsterAttackResults").innerHTML = "<u>Monster</u><br>Base: +" + people[i].str + "<br>Bonus: +" + people[i].attBonus + "<br>Attack: " + monsterAttack;
 		
