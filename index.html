@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dungeons and Dragons Character Building</title>
+
+		<meta name="description" content="Webpage">
+		<meta name="author" content="Vince Jones">
+		<link href="styles.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div id="addMonster">
+		<h2>Character or Monster Stats</h2>
+		<table>
+			<tr>
+				<td><label id="class">Class</label></td>
+  				<td><p>
+  					<p>Select one class for character development</p>
+  					<input type="checkbox" id="class" value="none" checked="checked"/>None
+  					<input type="checkbox" id="class" value="cleric"/>Cleric<br>
+  					<input type="checkbox" id="class" value="fighter"/>Fighter
+  					<input type="checkbox" id="class" value="rogue"/>Rogue<br>
+  					<input type="checkbox" id="class" value="wizard"/>Wizard
+  					<p>Select Monster for monster development</p>
+  					<input type="checkbox" id="class" value="monster"/>Monster
+  				</td></p>
+  			</tr>
+
+  			<tr><td><br></td></tr>
+
+  			<tr>
+  		  		<td><label id="str">Strength</label></td>
+  				<td>
+  					<form id="strength" action="form_action.asp">
+  						<input type="text" value="" size="5" maxlength="2">
+  					</form>
+  				</td>
+			</tr>
+
+			<tr>
+		  		<td><label id="dex">Dexterity</label></td>
+  				<td>
+  					<form id="dexterity" action="form_action.asp">
+  						<input type="text" value ="" size="5" maxlength="2">
+  					</form>
+  				</td>
+  			</tr>
+
+  			<tr>
+  		  		<td><label id="con">Constitution</label></td>
+  				<td>
+  					<form id="constitution" action="form_action.asp">
+  						<input type="text" value ="" size="5" maxlength="2"/>
+  					</form>
+  				</td>
+  			</tr>
+
+  			<tr>
+  		  		<td><label id="wis">Wisdom</label></td>
+  				<td>
+  					<form id="wisdom" action="form_action.asp">
+  						<input type="text" value ="" size="5" maxlength="2"/>
+  					</form>
+  				</td>
+  			<tr>
+
+  			<tr>
+  		  		<td><label id="int">Intelligence</label></td>
+  				<td>
+  					<form id="intelligence" action="form_action.asp">
+  						<input type="text" value ="" size="5" maxlength="2"/>
+  					</form>
+  				</td>
+  			</tr>
+
+  		 	<tr>
+  		  		<td><label id="cha">Charisma</label></td>
+  				<td>
+  					<form id="charisma" action="form_action.asp">
+  						<input type="text" value ="" size="5" maxlength="2"/>
+  					</form>
+  				</td>
+  			</tr>
+
+  		  	<tr>
+  		  		<td><label id="submit">Add Player or Monster to Records</label></td>
+  				<td><input type="submit" id="submitMonster"/></td>
+  		  	<tr>
+
+  		</table>
+  		</div>
+  		<p id="displayCreature"></p>
+
+  		<p id="characters"></p>
+
+		<script src="app.js"></script>
+	</body>
+</html>
