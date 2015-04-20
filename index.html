@@ -19,22 +19,6 @@
 		<p>This app will create one monster and one player, choose one set of stats and a D20 will be rolled for each to determine who will win in a fight.</p>
 		<table>
 			<tr>
-				<td><label id="creatureClass">Class</label></td>
-  				<td>
-  					<p>Select one class for character development</p>
-  					<form id="classButton" action="form_action.asp">
-  						<input type="radio" name="classType" id="1" value="None"/>None
-  						<input type="radio" name="classType" id="2" value="Cleric"/>Cleric<br>
-  						<input type="radio" name="classType" id="3" value="Fighter"/>Fighter
-  						<input type="radio" name="classType" id="4" value="Rogue"/>Rogue<br>
-  						<input type="radio" name="classType" id="5" value="Wizard"/>Wizard<br>
-  					</form>
-  					<p id="classError"></p>
-  				</td>
-  			</tr>
-
-  			<tr><td><br></td></tr>
-  			<tr>
   				<td><p>Monster Name:</p></td>
   				<td>
   					<form id="monsterName" action="form_action.asp">
@@ -53,9 +37,38 @@
   				</td>
   			</tr>
 
+			<tr>
+				<td><label id="creatureClass">Player Class</label></td>
+  				<td>
+  					<p>Select one class for character development</p>
+  					<form id="classButton" action="form_action.asp">
+  						<input type="radio" name="classType" id="1" value="None"/>None
+  						<input type="radio" name="classType" id="2" value="Cleric"/>Cleric<br>
+  						<input type="radio" name="classType" id="3" value="Fighter"/>Fighter
+  						<input type="radio" name="classType" id="4" value="Rogue"/>Rogue<br>
+  						<input type="radio" name="classType" id="5" value="Wizard"/>Wizard<br>
+  					</form>
+  					<p id="classError"></p>
+  				</td>
+  			</tr>
 
+  			<tr>
+				<td><label id="monsterClass">Monster Type</label></td>
+  				<td>
+  					<p>Select one monster type for monster development</p>
+  					<form id="monsterButton" action="form_action.asp">
+  						<input type="radio" name="monsterType" id="6" value="Ghoul"/>Ghoul
+  						<input type="radio" name="monsterType" id="7" value="Giant"/>Giant<br>
+  						<input type="radio" name="monsterType" id="8" value="Ooze"/>Ooze
+  						<input type="radio" name="monsterType" id="9" value="Fey"/>Fey<br>
+  						<input type="radio" name="monsterType" id="10" value="Dragon"/>Dragon<br>
+  					</form>
+  					<p id="monsterError"></p>
+  				</td>
+  			</tr>
 
-
+  			<tr><td><br></td></tr>
+  			
   			<div class="pMove">
   			<tr>
   		  		<td><label id="str">Strength</label></td>
@@ -149,6 +162,6 @@
   	  </div>
 
 
-		<script src="appExperiment.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>
